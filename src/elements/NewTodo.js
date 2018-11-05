@@ -16,7 +16,7 @@ class NewTodo extends Component {
 
   alertValue = event => {
     if (event.key === 'Enter') {
-      alert(event.target.value)
+      this.props.createTodo(event.target.value)
     }
   }
 

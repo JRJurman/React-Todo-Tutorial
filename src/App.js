@@ -16,13 +16,21 @@ class App extends Component {
     }
   }
 
+  newTodo = newTodo => {
+    this.setState({
+      todos: this.state.todos.concat({
+        name: newTodo, value: false
+      })
+    })
+  }
+
   render() {
     const Todos = this.state.todos.map(todo => <Todo isChecked={todo.value}>{todo.name}</Todo>)
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <NewTodo />
+          <NewTodo createTodo={this.newTodo} />
           {Todos}
         </header>
       </div>
