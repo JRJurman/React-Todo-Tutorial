@@ -9,7 +9,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Todo>Hello</Todo>
+          <Todo isChecked>Element</Todo>
+          <Todo isChecked>Props</Todo>
+          <Todo>State</Todo>
         </header>
       </div>
     );
